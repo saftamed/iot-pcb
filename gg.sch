@@ -656,7 +656,7 @@ Text GLabel 6150 1750 2    50   Input ~ 0
 P15
 Text GLabel 6150 1850 2    50   Input ~ 0
 P16
-Text GLabel 6650 1750 2    50   Input ~ 0
+Text GLabel 6800 1750 2    50   Input ~ 0
 P17
 Text GLabel 6650 1750 0    50   Input ~ 0
 MOSI
@@ -1856,4 +1856,6 @@ NoConn ~ 9700 1500
 NoConn ~ 6150 2850
 Wire Wire Line
 	10300 5450 10300 5700
+Wire Wire Line
+	6650 1750 6800 1750
 $EndSCHEMATC
