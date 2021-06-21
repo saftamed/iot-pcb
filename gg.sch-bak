@@ -341,38 +341,6 @@ F 3 "" H 4650 1650 50  0001 C CNN
 	1    4650 1650
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:AVR-ISP-6 J2
-U 1 1 60C231E8
-P 10400 5050
-F 0 "J2" H 10071 5146 50  0000 R CNN
-F 1 "AVR-ISP-6" H 10071 5055 50  0000 R CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" V 10150 5100 50  0001 C CNN
-F 3 " ~" H 9125 4500 50  0001 C CNN
-	1    10400 5050
-	1    0    0    -1  
-$EndComp
-Text GLabel 10800 4850 2    50   Input ~ 0
-MISO
-Text GLabel 10300 4450 2    50   Input ~ 0
-MOSI
-Text GLabel 10800 5050 2    50   Input ~ 0
-SCK
-Text GLabel 10800 5150 2    50   Input ~ 0
-RST
-$Comp
-L power:GND #PWR0114
-U 1 1 60BFDF12
-P 10300 5700
-F 0 "#PWR0114" H 10300 5450 50  0001 C CNN
-F 1 "GND" H 10305 5527 50  0000 C CNN
-F 2 "" H 10300 5700 50  0001 C CNN
-F 3 "" H 10300 5700 50  0001 C CNN
-	1    10300 5700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10300 4550 10300 4450
 Text GLabel 6150 1950 2    50   Input ~ 0
 MOSI
 Text GLabel 6150 2050 2    50   Input ~ 0
@@ -403,17 +371,6 @@ F 1 "ATmega328P-PU" H 6300 1300 50  0000 R CNN
 F 2 "Package_DIP:DIP-28_W7.62mm" H 5550 2850 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 5550 2850 50  0001 C CNN
 	1    5550 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0115
-U 1 1 60BFEB44
-P 11100 4950
-F 0 "#PWR0115" H 11100 4800 50  0001 C CNN
-F 1 "+5V" H 11115 5123 50  0000 C CNN
-F 2 "" H 11100 4950 50  0001 C CNN
-F 3 "" H 11100 4950 50  0001 C CNN
-	1    11100 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -814,12 +771,12 @@ $EndComp
 $Comp
 L power:GND #PWR0127
 U 1 1 60C9A063
-P 9750 3800
-F 0 "#PWR0127" H 9750 3550 50  0001 C CNN
-F 1 "GND" H 9755 3627 50  0000 C CNN
-F 2 "" H 9750 3800 50  0001 C CNN
-F 3 "" H 9750 3800 50  0001 C CNN
-	1    9750 3800
+P 9500 5700
+F 0 "#PWR0127" H 9500 5450 50  0001 C CNN
+F 1 "GND" H 9500 5550 50  0000 C CNN
+F 2 "" H 9500 5700 50  0001 C CNN
+F 3 "" H 9500 5700 50  0001 C CNN
+	1    9500 5700
 	1    0    0    -1  
 $EndComp
 Text GLabel 9750 3600 2    50   Input ~ 0
@@ -894,11 +851,11 @@ F 3 "" H 8350 3800 50  0001 C CNN
 $EndComp
 Text GLabel 8350 3600 2    50   Input ~ 0
 A2
-Text GLabel 6150 2550 2    50   Input ~ 0
-A0
 Text GLabel 6150 2650 2    50   Input ~ 0
-A1
+A0
 Text GLabel 6150 2750 2    50   Input ~ 0
+A1
+Text GLabel 6150 2850 2    50   Input ~ 0
 A2
 Text GLabel 6150 3750 2    50   Input ~ 0
 D6
@@ -1828,9 +1785,6 @@ Wire Wire Line
 	7550 3600 7550 3700
 NoConn ~ 9700 1400
 NoConn ~ 9700 1500
-NoConn ~ 6150 2850
-Wire Wire Line
-	10300 5450 10300 5700
 Wire Wire Line
 	6650 1750 6800 1750
 Text GLabel 900  3100 0    50   Input ~ 0
@@ -1863,6 +1817,133 @@ Wire Wire Line
 	5150 1050 5900 1050
 Wire Wire Line
 	5150 700  5900 700 
-Wire Wire Line
-	11100 4950 10800 4950
+Text GLabel 9500 5050 0    50   Input ~ 0
+MISO
+Text GLabel 9500 4950 0    50   Input ~ 0
+SCK
+Text GLabel 6150 2550 2    50   Input ~ 0
+14
+Text GLabel 9500 4850 0    50   Input ~ 0
+14
+$Comp
+L Connector:Screw_Terminal_01x04 J2
+U 1 1 60D52FFB
+P 9700 4950
+F 0 "J2" H 9780 4942 50  0000 L CNN
+F 1 "Screw_Terminal_01x04" H 9780 4851 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 9700 4950 50  0001 C CNN
+F 3 "~" H 9700 4950 50  0001 C CNN
+	1    9700 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J19
+U 1 1 60DAB8F0
+P 10550 4150
+F 0 "J19" H 10630 4142 50  0000 L CNN
+F 1 "Micro" H 10630 4051 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 10550 4150 50  0001 C CNN
+F 3 "~" H 10550 4150 50  0001 C CNN
+	1    10550 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0114
+U 1 1 60DAC02A
+P 10350 4150
+F 0 "#PWR0114" H 10350 4000 50  0001 C CNN
+F 1 "+5V" H 10365 4323 50  0000 C CNN
+F 2 "" H 10350 4150 50  0001 C CNN
+F 3 "" H 10350 4150 50  0001 C CNN
+	1    10350 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 60DAD162
+P 9750 3800
+F 0 "#PWR0115" H 9750 3550 50  0001 C CNN
+F 1 "GND" H 9755 3627 50  0000 C CNN
+F 2 "" H 9750 3800 50  0001 C CNN
+F 3 "" H 9750 3800 50  0001 C CNN
+	1    9750 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0146
+U 1 1 60DAD65B
+P 10350 4250
+F 0 "#PWR0146" H 10350 4000 50  0001 C CNN
+F 1 "GND" H 10355 4077 50  0000 C CNN
+F 2 "" H 10350 4250 50  0001 C CNN
+F 3 "" H 10350 4250 50  0001 C CNN
+	1    10350 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J20
+U 1 1 60CFE3A3
+P 9700 5600
+F 0 "J20" H 9780 5592 50  0000 L CNN
+F 1 "Micro" H 9780 5501 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9700 5600 50  0001 C CNN
+F 3 "~" H 9700 5600 50  0001 C CNN
+	1    9700 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0147
+U 1 1 60CFF3A6
+P 9500 5600
+F 0 "#PWR0147" H 9500 5450 50  0001 C CNN
+F 1 "+5V" H 9515 5773 50  0000 C CNN
+F 2 "" H 9500 5600 50  0001 C CNN
+F 3 "" H 9500 5600 50  0001 C CNN
+	1    9500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 60D25AB2
+P 10800 6350
+F 0 "H?" H 10700 6304 50  0000 R CNN
+F 1 "MountingHole" H 10700 6395 50  0000 R CNN
+F 2 "" H 10800 6350 50  0001 C CNN
+F 3 "~" H 10800 6350 50  0001 C CNN
+	1    10800 6350
+	1    0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 60D4B862
+P 10050 6350
+F 0 "H?" H 9950 6304 50  0000 R CNN
+F 1 "MountingHole" H 9950 6395 50  0000 R CNN
+F 2 "" H 10050 6350 50  0001 C CNN
+F 3 "~" H 10050 6350 50  0001 C CNN
+	1    10050 6350
+	1    0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 60D4BDB5
+P 10800 6100
+F 0 "H?" H 10700 6054 50  0000 R CNN
+F 1 "MountingHole" H 10700 6145 50  0000 R CNN
+F 2 "" H 10800 6100 50  0001 C CNN
+F 3 "~" H 10800 6100 50  0001 C CNN
+	1    10800 6100
+	1    0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 60D4C572
+P 10050 6100
+F 0 "H?" H 9950 6054 50  0000 R CNN
+F 1 "MountingHole" H 9950 6145 50  0000 R CNN
+F 2 "" H 10050 6100 50  0001 C CNN
+F 3 "~" H 10050 6100 50  0001 C CNN
+	1    10050 6100
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
