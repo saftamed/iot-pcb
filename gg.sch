@@ -1946,4 +1946,68 @@ F 3 "~" H 10050 6100 50  0001 C CNN
 	1    10050 6100
 	1    0    0    1   
 $EndComp
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J21
+U 1 1 60D18AFC
+P 8250 6000
+F 0 "J21" H 8300 6317 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 8300 6226 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical" H 8250 6000 50  0001 C CNN
+F 3 "~" H 8250 6000 50  0001 C CNN
+	1    8250 6000
+	1    0    0    -1  
+$EndComp
+Text GLabel 8500 1500 3    50   Input ~ 0
+3v3
+Text GLabel 8050 6200 0    50   Input ~ 0
+3v3
+$Comp
+L power:GND #PWR0148
+U 1 1 60D1C882
+P 8900 5900
+F 0 "#PWR0148" H 8900 5650 50  0001 C CNN
+F 1 "GND" H 8900 5750 50  0000 C CNN
+F 2 "" H 8900 5900 50  0001 C CNN
+F 3 "" H 8900 5900 50  0001 C CNN
+	1    8900 5900
+	1    0    0    -1  
+$EndComp
+Text GLabel 8050 5900 0    50   Input ~ 0
+TXD
+Text GLabel 8550 6200 2    50   Input ~ 0
+RXD3v3
+Text GLabel 8050 6000 0    50   Input ~ 0
+3v3
+Text GLabel 8550 6000 2    50   Input ~ 0
+3v3
+Wire Wire Line
+	8550 5900 8900 5900
+Text GLabel 8050 6100 0    50   Input ~ 0
+RST
+Text GLabel 8550 6100 2    50   Input ~ 0
+RST
+$Comp
+L Connector:Conn_01x02_Male J22
+U 1 1 60E01238
+P 1300 7250
+F 0 "J22" H 1408 7431 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1408 7340 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1300 7250 50  0001 C CNN
+F 3 "~" H 1300 7250 50  0001 C CNN
+	1    1300 7250
+	1    0    0    -1  
+$EndComp
+Text GLabel 1500 7250 2    50   Input ~ 0
+RST
+$Comp
+L power:GND #PWR0149
+U 1 1 60E018B0
+P 1500 7350
+F 0 "#PWR0149" H 1500 7100 50  0001 C CNN
+F 1 "GND" H 1505 7177 50  0000 C CNN
+F 2 "" H 1500 7350 50  0001 C CNN
+F 3 "" H 1500 7350 50  0001 C CNN
+	1    1500 7350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

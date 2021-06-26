@@ -1903,47 +1903,115 @@ F 3 "" H 9500 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H4
 U 1 1 60D25AB2
 P 10800 6350
-F 0 "H?" H 10700 6304 50  0000 R CNN
+F 0 "H4" H 10700 6304 50  0000 R CNN
 F 1 "MountingHole" H 10700 6395 50  0000 R CNN
-F 2 "" H 10800 6350 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10800 6350 50  0001 C CNN
 F 3 "~" H 10800 6350 50  0001 C CNN
 	1    10800 6350
 	1    0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H2
 U 1 1 60D4B862
 P 10050 6350
-F 0 "H?" H 9950 6304 50  0000 R CNN
+F 0 "H2" H 9950 6304 50  0000 R CNN
 F 1 "MountingHole" H 9950 6395 50  0000 R CNN
-F 2 "" H 10050 6350 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10050 6350 50  0001 C CNN
 F 3 "~" H 10050 6350 50  0001 C CNN
 	1    10050 6350
 	1    0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H3
 U 1 1 60D4BDB5
 P 10800 6100
-F 0 "H?" H 10700 6054 50  0000 R CNN
+F 0 "H3" H 10700 6054 50  0000 R CNN
 F 1 "MountingHole" H 10700 6145 50  0000 R CNN
-F 2 "" H 10800 6100 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10800 6100 50  0001 C CNN
 F 3 "~" H 10800 6100 50  0001 C CNN
 	1    10800 6100
 	1    0    0    1   
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H1
 U 1 1 60D4C572
 P 10050 6100
-F 0 "H?" H 9950 6054 50  0000 R CNN
+F 0 "H1" H 9950 6054 50  0000 R CNN
 F 1 "MountingHole" H 9950 6145 50  0000 R CNN
-F 2 "" H 10050 6100 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10050 6100 50  0001 C CNN
 F 3 "~" H 10050 6100 50  0001 C CNN
 	1    10050 6100
 	1    0    0    1   
 $EndComp
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J21
+U 1 1 60D18AFC
+P 8250 6000
+F 0 "J21" H 8300 6317 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 8300 6226 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical" H 8250 6000 50  0001 C CNN
+F 3 "~" H 8250 6000 50  0001 C CNN
+	1    8250 6000
+	1    0    0    -1  
+$EndComp
+Text GLabel 8500 1500 3    50   Input ~ 0
+3v3
+Text GLabel 8050 6200 0    50   Input ~ 0
+3v3
+$Comp
+L power:GND #PWR0148
+U 1 1 60D1C882
+P 8900 5900
+F 0 "#PWR0148" H 8900 5650 50  0001 C CNN
+F 1 "GND" H 8900 5750 50  0000 C CNN
+F 2 "" H 8900 5900 50  0001 C CNN
+F 3 "" H 8900 5900 50  0001 C CNN
+	1    8900 5900
+	1    0    0    -1  
+$EndComp
+Text GLabel 8050 5900 0    50   Input ~ 0
+TXD
+Text GLabel 8550 6200 2    50   Input ~ 0
+RXD3v3
+Text GLabel 8050 6000 0    50   Input ~ 0
+3v3
+Text GLabel 8550 6000 2    50   Input ~ 0
+3v3
+Wire Wire Line
+	8550 5900 8900 5900
+Text GLabel 8050 6100 0    50   Input ~ 0
+RST
+Text GLabel 8550 6100 2    50   Input ~ 0
+RST
+$Comp
+L Switch:SW_DIP_x01 SW2
+U 1 1 60DDD81A
+P 1450 7650
+F 0 "SW2" H 1450 7917 50  0000 C CNN
+F 1 "SW_DIP_x01" H 1450 7826 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 1450 7650 50  0001 C CNN
+F 3 "~" H 1450 7650 50  0001 C CNN
+	1    1450 7650
+	1    0    0    -1  
+$EndComp
+Text GLabel 1750 7650 2    50   Input ~ 0
+RST
+$Comp
+L power:GND #PWR0150
+U 1 1 60DDE358
+P 1050 7550
+F 0 "#PWR0150" H 1050 7300 50  0001 C CNN
+F 1 "GND" H 1055 7377 50  0000 C CNN
+F 2 "" H 1050 7550 50  0001 C CNN
+F 3 "" H 1050 7550 50  0001 C CNN
+	1    1050 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 7650 1150 7550
+Wire Wire Line
+	1150 7550 1050 7550
 $EndSCHEMATC
